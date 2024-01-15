@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="global.css">
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"
+        defer></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <title>Estude conosco!</title>
+</head>
+
+<body>
+    <div class="fundo"></div>
+
+    <div class="nav py-3" id="nav">
+        <img src="images/logo.jpeg" class="ml-2" style="width: 40px; border-radius: 100%;" alt="">
+        <div class="mr-2">
+
+            <button class="btn btn-white" data-bs-toggle="modal" data-bs-target="#modalLogin">ENTRAR</button>
+            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalRegistro">REGISTRAR</button>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-1 py-5 mt-5">
+        <div class="row d-flex justify-content-start align-items-center" style="height: 80vh;">
+            <div class="col-12 text-center fonte mt-5">
+                <h6 class="mt-5">Dev Pró Estudante</h6>
+                <span class="titulo col-12 text-center">Estude Com a DEV PRÓ ESTUDANTE</span>
+                <h5>Aprenda com nossas vídeos aulas, realizada por outros estudantes.</h5>
+                <h5>De forma simples e prática, tentaremos passar a vocês toda a explicação e exemplos das matérias vistas em aulas.</h5>
+            </div>
+            <div class="col-12">
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="modalLogin" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-transparent" style="border: 0;">
+                <div class="modal-body">
+                    <div class="container mb-5 borda" id="login">
+                        <div class="row">
+                            <div class="col-12 p-5 log">
+                                <div>
+                                    <label class="h1 col-12 text-center text-white">Entrar</label>
+                                </div>
+                                <div class="mt-3">
+                                    <label class="text-white">E-mail</label>
+                                    <input type="text" class="col-12 py-1 inputText" placeholder="Digite aqui seu email"
+                                        id="email">
+                                </div>
+                                <div class="mt-2">
+                                    <label class="text-white">Senha</label>
+                                    <input type="password" class="col-12 py-1 inputText"
+                                        placeholder="Digite aqui sua senha" id="senha">
+                                </div>
+                                <div>
+                                    <button class="btn mt-5 text-white col-12" style="background-color: transparent;"
+                                        onclick="esqueciSenha()">Esqueci minha senha</button>
+                                    <button class="btn btn-info col-12" onclick="entrar()">Entrar</button>
+                                    <button class="btn btn-danger col-12 mt-2" data-bs-dismiss="modal">FECHAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalRegistro" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-transparent" style="border: 0;">
+
+                <div class="modal-body">
+                    <div class="container mt-5 mb-5 borda">
+                        <div class="row">
+                            <div class="col-12 p-5 log">
+                                <div>
+                                    <label class="h1 col-12 text-center text-white">Registrar-se</label>
+                                </div>
+                                <div class="mt-3">
+                                    <label class="text-white">Nome completo</label>
+                                    <input type="text" class="col-12 py-1 inputText"
+                                        placeholder="Digite aqui seu nome completo" id="nome">
+
+                                </div>
+                                <div class="mt-3">
+                                    <label class="text-white">RGM</label>
+                                    <input type="text" class="col-12 py-1 inputText" placeholder="Digite aqui seu RGM"
+                                        id="rgmCadastro">
+
+                                </div>
+                                <div class="mt-3">
+                                    <label class="text-white">E-mail</label>
+                                    <input type="text" class="col-12 py-1 inputText"
+                                        placeholder="Digite aqui seu nome completo" id="emailCadastro">
+
+                                </div>
+                                <div class="mt-2">
+                                    <label class="text-white">Senha</label>
+                                    <input type="text" class="col-12 py-1 inputText" placeholder="Digite aqui sua senha"
+                                        id="senhaCadastro">
+                                </div>
+                                <div class="mt-2">
+                                    <label class="text-white">Confirmar Senha</label>
+                                    <input type="text" class="col-12 py-1 inputText" placeholder="Confirme sua senha"
+                                        id="confirmarSenha">
+                                </div>
+                                <div>
+                                    <button class="btn btn-info col-12 mt-5" onclick="registrar()">Registrar-me</button>
+                                    <button class="btn btn-danger col-12 mt-2" data-bs-dismiss="modal">FECHAR</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-storage-compat.js"></script>
+<script src="firebase-init.js"></script>
+<script src="index.js"></script>
+<script src="loading.js"></script>
+
+
+</html>
